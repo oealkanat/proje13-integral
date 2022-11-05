@@ -2,10 +2,13 @@ import java.util.Scanner;
 
 public class Main {
 
+
     public static void main(String[] args) {
+        power powSym = new power();
         Scanner input = new Scanner(System.in);
         int degree=-1, i;
         int[] multipler;
+
 
         while (degree < 0) {
             System.out.print("What's the degree of the equation?: ");
@@ -23,17 +26,17 @@ public class Main {
 
         for (int j=degree ; j >= 0 ; j--) {
             if (j != 0) {
-                System.out.print("(" + multipler[j] + "x^" + j + ") + ");
+                System.out.print("(" + multipler[j] + "x" + powSym.myPow(j) + ") + ");
             }
             if (j == 0) {
-                System.out.print("(" + multipler[j] + "x^" + j + ")");
+                System.out.print("(" + multipler[j] + ")");
             }
         }
 
-        System.out.println("Integral of your polynomial: ");
+        System.out.println("\nIntegral of your polynomial: ");
 
         for (i = degree ; i >= 0 ; i--) {
-            multipler[i] /= i;
+
         }
 
     }
