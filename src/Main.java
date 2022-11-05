@@ -18,7 +18,10 @@ public class Main {
                 }
 
                 if (j!=0) {
-                    System.out.print("x" + powSym.myPow(j));
+                    System.out.print("x");
+                    if (j!=1) {
+                        System.out.print(powSym.myPow(j));
+                    }
                 }
             }
         }
@@ -31,8 +34,8 @@ public class Main {
         float[] coEfInt;
         float[] coEfDer;
 
-        while (degree < 0 || degree > 10) {
-            System.out.print("Enter the degree of the polynomial: ");
+        while (degree <= 0 || degree > 9) {
+            System.out.print("Enter the degree of the polynomial (1-9): ");
             degree = input.nextInt();
         }
         degreeInt = degree;
